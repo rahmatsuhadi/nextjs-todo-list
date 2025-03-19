@@ -2,6 +2,8 @@
 
 FROM node:18-alpine
 
+# Install Yarn (jika belum terpasang)
+RUN npm install -g yarn
 
 # Set working directory di dalam container
 WORKDIR /app

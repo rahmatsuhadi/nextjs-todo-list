@@ -10,8 +10,8 @@ WORKDIR /app
 # salin package.json
 COPY package*.json ./
 
-RUN npm install
-RUN npm install -g yarn
+RUN npm install 
+# RUN npm install -g yarn
 
 # Salin seluruh kode aplikasi  ke container
 COPY . .

@@ -3,7 +3,6 @@
 FROM node:18-alpine
 
 # Install Yarn (jika belum terpasang)
-RUN npm install -g yarn
 
 # Set working directory di dalam container
 WORKDIR /app
@@ -12,9 +11,11 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN npm install
+RUN npm install -g yarn
 
 # Salin seluruh kode aplikasi  ke container
 COPY . .
+
 
 RUN npm run build
 
